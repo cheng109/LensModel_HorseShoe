@@ -51,7 +51,7 @@ def main():
     imageDict['B'] =  [(71,272), (266, 96)]
     imageDict['C'] =  [(93,282), (112, 46)]
 
-    dataFileName = "horseshoe_test.data"
+    dataFileName = "horseshoe.data"
     createLensModelData(imageDict, dataFileName)
 
 
