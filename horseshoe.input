@@ -1,0 +1,34 @@
+set omega = 0.27
+set lambda = 0.73
+set hvale = 1.0e4
+
+set zlens = 0.4457
+set zsrc = 2.379
+
+set gridflag = 0
+set chimode = 0
+set checkparity = 0
+
+set omitcore = 1.0e-6
+set restart = 10
+
+data horseshoe_test.data
+
+setlens 1 1
+alpha 5.0 0 0 0.1 10.0 0.1 10 0 0 1
+1 0 0 1 1 0 0 0 0 0
+optimize fit2a
+
+setlens fit2a.start
+changevary 1
+1 0 0 1 1 1 1 0 0 0
+varyone 1 7 -90 90 37 fit2b
+
+setlens fit2b.start
+changevary 1
+1 1 1 1 1 1 1 0 0 0
+optimize fit2c
+
+
+
+quit
